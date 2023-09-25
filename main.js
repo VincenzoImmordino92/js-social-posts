@@ -62,12 +62,8 @@ const post = document.querySelector('#container');
 
     post.innerHTML = ''; 
 
-    let dateMonth = new Date().getMonth()+1;
-    let dateDate = new Date().getDate();
-    let dateFullYear = new Date().getFullYear();
-    console.log(dateMonth);
-    console.log(dateDate);
-    console.log(dateFullYear);
+  
+    
 
 posts.forEach((postSingolo) =>{
 
@@ -112,7 +108,19 @@ posts.forEach((postSingolo) =>{
 })
 
 
-const newPersone = persone.map((testo) =>{
+function formatDate() {
+    let dateMonth = new Date().getMonth()+1;
+    let dateDate = new Date().getDate();
+    let dateFullYear = new Date().getFullYear();
+    let formatoData = dateMonth + '-' + dateDate + '-' + dateFullYear
+    console.log(dateMonth);
+    console.log(dateDate);
+    console.log(formatoData);
+    return formatoData
+    } console.log(formatDate);
+
+
+/* const newPersone = persone.map((testo) =>{
     const {nome, cognome, eta} = testo
     let isPatentato = false
     if(eta>= 18){
@@ -126,7 +134,7 @@ const newPersone = persone.map((testo) =>{
    
     }
   )
-  console.log(testo);
+  console.log(testo); */
 
 
 
